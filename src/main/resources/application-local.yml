@@ -1,0 +1,17 @@
+spring:
+  datasource:
+#    url: jdbc:h2:mem:testdb                # in-memory 모드 (db 종료 시 데이터 사라짐)
+    url: jdbc:h2:~/testdb                 # embedded 모드 (db 종료 시 데이터 유지)
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
