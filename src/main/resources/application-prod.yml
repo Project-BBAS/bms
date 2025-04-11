@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/testdb
+    driver-class-name: org.postgresql.Driver
+    username: bbas
+    password: bbas1234!
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        show_sql: true

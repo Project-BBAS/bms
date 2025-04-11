@@ -2,4 +2,4 @@ spring:
   application:
     name: bms
   profiles:
-    active: local
+    active: prod
