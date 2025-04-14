@@ -15,7 +15,19 @@
 
 ## 1. 프로젝트 소개
 123456
+<div align = "right">
+
+[목차](#목차)
+
+</div>
+
 ## 2. 개발 기간
+
+<div align = "right">
+
+[목차](#목차)
+
+</div>
 
 ## 3. 개발 환경
 - **Java** : <img src = "https://img.shields.io/badge/Java 17-007396?&logo=java&logoColor=white">
@@ -33,9 +45,11 @@
 [목차](#목차)
 
 </div>
-<div>
 
 ## 4. 프로젝트 구조
+
+<div align = "right">
+
 [목차](#목차)
 
 </div>
@@ -46,11 +60,19 @@
 
 [목차](#목차)
 
-<div>
+</div>
 
 ## 6. UI 설계
 
+<div align = "right">
+
+[목차](#목차)
+
+</div>
+
 ## 7. ERD 설계
+
+<div align = "right">
 
 [목차](#목차)
 
@@ -58,7 +80,19 @@
 
 ## 8. API 명세
 
+<div align = "right">
+
+[목차](#목차)
+
+</div>
+
 ## 9. 기능 명세
+
+<div align = "right">
+
+[목차](#목차)
+
+</div>
 
 ## 10. 프로젝트 회고
 
@@ -67,5 +101,4 @@
 
 [목차](#목차)
 
-</div>
 </div>
