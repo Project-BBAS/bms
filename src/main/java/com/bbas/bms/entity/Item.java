@@ -10,11 +10,7 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @NoArgsConstructor
-public class Item {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Item extends BaseEntity{
 
     @Column(name = "name", nullable = false)
     private String name;

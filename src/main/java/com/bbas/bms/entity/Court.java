@@ -9,11 +9,7 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @NoArgsConstructor
-public class Court {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Court extends BaseEntity{
 
     @Column(name = "name", nullable = false, unique = true)
     private String name;
