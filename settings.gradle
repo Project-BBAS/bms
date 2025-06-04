@@ -1,1 +1,5 @@
+plugins {
+    // 사용자가 명시한 Java 버전에 맞는 JDK를 자동으로 찾고 설치
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.8.0'
+}
 rootProject.name = 'bms'
