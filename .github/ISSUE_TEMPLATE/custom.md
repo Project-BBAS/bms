@@ -1,7 +1,7 @@
 ---
 name: Custom issue template
 about: 커스텀 이슈 작성 시 사용
-title: ''
+title: "[CUSTOM]"
 labels: ''
 assignees: ''
 

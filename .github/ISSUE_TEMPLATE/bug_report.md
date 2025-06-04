@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: 오류 또는 예외 상황 발생 시 사용
-title: ''
+title: "[BUG]"
 labels: ''
 assignees: ''
 
