@@ -10,10 +10,10 @@ public class ChatRoomMember extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "CHAT_ROOM_ID", nullable = false)
-    private ChatRoom chatRoomId;
+    private ChatRoom chatRoom;
 
     @ManyToOne
     @JoinColumn(name = "USERS_ID", nullable = false)
-    private Users userId;
+    private Users users;
 
 }
