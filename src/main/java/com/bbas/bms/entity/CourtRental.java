@@ -11,13 +11,6 @@ import java.time.LocalDateTime;
 @SoftDelete
 @NoArgsConstructor
 public class CourtRental extends BaseEntity {
-
-    @Column(name = "court_id", nullable = false)
-    private Long courtId;
-
-    @Column(name = "user_id", nullable = false)
-    private Long userId;
-
     @Column(name = "price", nullable = false)
     private Long price;
 
@@ -27,4 +20,11 @@ public class CourtRental extends BaseEntity {
     @Column(name = "check_out", nullable = false)
     private LocalDateTime checkOut;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "court_id")
+    private Court court;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "users_id")
+    private Users users;
 }
