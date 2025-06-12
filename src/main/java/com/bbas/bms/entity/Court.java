@@ -1,10 +1,12 @@
 package com.bbas.bms.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.SoftDelete;
 
 @Entity
+@Table(name = "court")
+@SoftDelete
 @NoArgsConstructor
 public class Court extends BaseEntity{
 
@@ -28,4 +30,9 @@ public class Court extends BaseEntity{
 
     @Column(name = "close_time", nullable = false)
     private String close_time;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "court_price_id")
+    private CourtPrice courtPrice;
+
 }
