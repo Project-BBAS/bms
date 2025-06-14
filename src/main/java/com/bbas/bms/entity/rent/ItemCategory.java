@@ -1,4 +1,4 @@
-package com.bbas.bms.rent;
+package com.bbas.bms.entity.rent;
 
 import com.bbas.bms.entity.BaseEntity;
 import com.bbas.bms.entity.Item;
