@@ -1,6 +1,7 @@
 package com.bbas.bms.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 import org.hibernate.annotations.SQLRestriction;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
@@ -13,6 +14,7 @@ import java.time.LocalDateTime;
 @MappedSuperclass
 @SQLRestriction("delete_flag = false")
 @EntityListeners(AuditingEntityListener.class)
+@Getter
 public abstract class BaseEntity implements Serializable {
 
     @Id
