@@ -1,6 +1,7 @@
 package com.bbas.bms.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 import org.hibernate.annotations.SQLRestriction;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
@@ -13,6 +14,7 @@ import java.time.LocalDateTime;
 @MappedSuperclass
 @SQLRestriction("delete_flag = false")
 @EntityListeners(AuditingEntityListener.class)
+@Getter
 public abstract class BaseEntity implements Serializable {
 
     @Id
@@ -22,18 +24,18 @@ public abstract class BaseEntity implements Serializable {
     @Column(name = "delete_flag", nullable = false)
     private boolean deleteFlag;
 
-    @CreatedBy
-    @Column(name = "created_by", nullable = false, updatable = false)
-    private String createdBy;
-
-    @CreatedDate
-    @Column(name = "created_date", nullable = false, updatable = false)
-    private LocalDateTime createdDate;
-
-    @LastModifiedBy
-    @Column(name = "modified_by", nullable = false)
-    private String modifiedBy;
-
-    @Column(name = "modified_date", nullable = false)
-    private LocalDateTime modifiedDate;
+//    @CreatedBy
+//    @Column(name = "created_by", nullable = false, updatable = false)
+//    private String createdBy;
+//
+//    @CreatedDate
+//    @Column(name = "created_date", nullable = false, updatable = false)
+//    private LocalDateTime createdDate;
+//
+//    @LastModifiedBy
+//    @Column(name = "modified_by", nullable = false)
+//    private String modifiedBy;
+//
+//    @Column(name = "modified_date", nullable = false)
+//    private LocalDateTime modifiedDate;
 }
