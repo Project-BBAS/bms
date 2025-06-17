@@ -1,11 +1,13 @@
 package com.bbas.bms.entity.chat;
 
-import com.bbas.bms.entity.BaseEntity;
+import com.bbas.bms.entity.common.BaseEntity;
 import jakarta.persistence.*;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.SQLDelete;
 
 @Entity
-@Table(name = "chat_room")
+@NoArgsConstructor
+@Table(name = "CHAT_ROOM")
 @SQLDelete(sql = "UPDATE chat_room SET delete_flag = true WHERE id = ?")
 public class ChatRoom extends BaseEntity {
 

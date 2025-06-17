@@ -1,4 +1,4 @@
-package com.bbas.bms.entity;
+package com.bbas.bms.entity.common;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -21,21 +21,21 @@ public abstract class BaseEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "delete_flag", nullable = false)
+    @Column(name = "DELETE_FLAG", nullable = false)
     private boolean deleteFlag;
 
     @CreatedBy
-    @Column(name = "created_by", nullable = false, updatable = false)
+    @Column(name = "CREATED_BY", nullable = false, updatable = false)
     private String createdBy;
 
     @CreatedDate
-    @Column(name = "created_date", nullable = false, updatable = false)
+    @Column(name = "CREATED_DATE", nullable = false, updatable = false)
     private LocalDateTime createdDate;
 
     @LastModifiedBy
-    @Column(name = "modified_by", nullable = false)
+    @Column(name = "MODIFIED_BY", nullable = false)
     private String modifiedBy;
 
-    @Column(name = "modified_date", nullable = false)
+    @Column(name = "MODIFIED_DATE", nullable = false)
     private LocalDateTime modifiedDate;
 }

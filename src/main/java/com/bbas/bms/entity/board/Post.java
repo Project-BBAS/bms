@@ -1,12 +1,14 @@
 package com.bbas.bms.entity.board;
 
-import com.bbas.bms.entity.BaseEntity;
-import com.bbas.bms.entity.Users;
+import com.bbas.bms.entity.common.BaseEntity;
+import com.bbas.bms.entity.user.Users;
 import jakarta.persistence.*;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.SQLDelete;
 
 @Entity
-@Table(name = "post")
+@NoArgsConstructor
+@Table(name = "POST")
 @SQLDelete(sql = "UPDATE post SET delete_flag = true WHERE id = ?")
 public class Post extends BaseEntity {
 
