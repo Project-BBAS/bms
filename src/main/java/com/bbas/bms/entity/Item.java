@@ -3,9 +3,12 @@ package com.bbas.bms.entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import java.time.LocalDateTime;
+
+import jakarta.persistence.Table;
 import lombok.NoArgsConstructor;
 
 @Entity
+@Table(name = "item")
 @NoArgsConstructor
 public class Item extends BaseEntity{
 
