@@ -5,11 +5,9 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.SoftDelete;
 
 @Entity
 @Table(name = "match")
-@SoftDelete
 @NoArgsConstructor
 public class Match extends BaseEntity{
 

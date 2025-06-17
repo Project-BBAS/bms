@@ -2,13 +2,11 @@ package com.bbas.bms.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.SoftDelete;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "court_rental")
-@SoftDelete
 @NoArgsConstructor
 public class CourtRental extends BaseEntity {
     @Column(name = "price", nullable = false)

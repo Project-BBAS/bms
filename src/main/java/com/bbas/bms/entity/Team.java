@@ -6,11 +6,9 @@ import java.awt.geom.Area;
 import java.time.LocalDateTime;
 
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.SoftDelete;
 
 @Entity
 @Table(name = "team")
-@SoftDelete
 @NoArgsConstructor
 public class Team extends BaseEntity{
 

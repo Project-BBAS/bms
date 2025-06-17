@@ -6,11 +6,9 @@ import java.time.LocalDateTime;
 
 import jakarta.persistence.Table;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.SoftDelete;
 
 @Entity
 @Table(name = "item")
-@SoftDelete
 @NoArgsConstructor
 public class Item extends BaseEntity{
 

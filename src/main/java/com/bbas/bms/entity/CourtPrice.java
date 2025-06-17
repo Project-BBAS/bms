@@ -4,13 +4,11 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.SoftDelete;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "court_price")
-@SoftDelete
 @NoArgsConstructor
 public class CourtPrice extends BaseEntity {
 
