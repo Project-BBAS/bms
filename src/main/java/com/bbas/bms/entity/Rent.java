@@ -20,9 +20,8 @@ public class Rent extends BaseEntity{
     @Column(name = "end_time", nullable = false)
     private LocalDateTime end_date;
 
-    @Column(name = "item_id", nullable = false)
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "item_id")
+    @JoinColumn(name = "item_id", nullable = false)
     private Item item;
 
     @ManyToOne(fetch = FetchType.LAZY)
