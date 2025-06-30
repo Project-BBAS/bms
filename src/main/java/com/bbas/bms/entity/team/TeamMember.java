@@ -8,16 +8,16 @@ import org.hibernate.annotations.SQLDelete;
 
 @Entity
 @NoArgsConstructor
-@Table(name = "TEAM_MEMBER")
+@Table(name = "team_member")
 @SQLDelete(sql = "UPDATE team_member SET delete_flag = true WHERE id = ?")
 public class TeamMember extends BaseEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "TEAM_ID", nullable = false)
+    @JoinColumn(name = "team_id", nullable = false)
     private Team team;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "USERS_ID", nullable = false)
+    @JoinColumn(name = "users_id", nullable = false)
     private Users users;
 
 }

@@ -12,12 +12,12 @@ import org.hibernate.annotations.SQLDelete;
 
 @Entity
 @NoArgsConstructor
-@Table(name = "LEADER")
+@Table(name = "leader")
 @SQLDelete(sql = "UPDATE leader SET delete_flag = true WHERE id = ?")
 public class Leader extends BaseEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "USERS_ID", nullable = false)
+    @JoinColumn(name = "users_id", nullable = false)
     private Users users;
 
     @ManyToOne(fetch = FetchType.LAZY)

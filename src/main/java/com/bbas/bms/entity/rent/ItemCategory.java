@@ -9,11 +9,11 @@ import java.util.List;
 
 @Entity
 @NoArgsConstructor
-@Table(name = "ITEM_CATEGORY")
+@Table(name = "item_category")
 @SQLDelete(sql = "UPDATE item_category SET delete_flag = true WHERE id = ?")
 public class ItemCategory extends BaseEntity {
 
-    @Column(name = "NAME", nullable = false, length = 100)
+    @Column(name = "name", nullable = false, length = 100)
     private String name;
 
     @OneToMany(mappedBy = "itemCategory")

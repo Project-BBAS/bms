@@ -9,10 +9,10 @@ import org.hibernate.annotations.SQLDelete;
 
 @Entity
 @NoArgsConstructor
-@Table(name = "TAG")
+@Table(name = "tag")
 @SQLDelete(sql = "UPDATE tag SET delete_flag = true WHERE id = ?")
 public class Tag extends BaseEntity {
 
-    @Column(name = "NAME", nullable = false, unique = true)
+    @Column(name = "name", nullable = false, unique = true)
     private String name;
 }

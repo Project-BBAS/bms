@@ -11,20 +11,20 @@ import java.time.LocalDateTime;
 
 @Entity
 @NoArgsConstructor
-@Table(name = "COURT_PRICE")
+@Table(name = "court_price")
 @SQLDelete(sql = "UPDATE court_price SET delete_flag = true WHERE id = ?")
 public class CourtPrice extends BaseEntity {
 
-    @Column(name = "IS_WEEKEND", nullable = false)
+    @Column(name = "is_weekend", nullable = false)
     private Boolean isWeekend;
 
-    @Column(name = "START_TIME", nullable = false)
+    @Column(name = "start_time", nullable = false)
     private LocalDateTime startTime;
 
-    @Column(name = "END_TIME", nullable = false)
+    @Column(name = "end_time", nullable = false)
     private LocalDateTime endTime;
 
-    @Column(name = "PRICE", nullable = false)
+    @Column(name = "price", nullable = false)
     private Long price;
 
 }

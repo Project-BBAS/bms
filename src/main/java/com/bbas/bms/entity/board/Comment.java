@@ -8,19 +8,19 @@ import org.hibernate.annotations.SQLDelete;
 
 @Entity
 @NoArgsConstructor
-@Table(name = "COMMENT")
+@Table(name = "comment")
 @SQLDelete(sql = "UPDATE comment SET delete_flag = true WHERE id = ?")
 public class Comment extends BaseEntity {
 
-    @Column(name = "CONTENT", nullable = false)
+    @Column(name = "content", nullable = false)
     private String content;
 
     @ManyToOne
-    @JoinColumn(name = "POST_ID", nullable = false)
+    @JoinColumn(name = "post_id", nullable = false)
     private Post postId;
 
     @ManyToOne
-    @JoinColumn(name = "USERS_ID", nullable = false)
+    @JoinColumn(name = "users_id", nullable = false)
     private Users users;
 
 }

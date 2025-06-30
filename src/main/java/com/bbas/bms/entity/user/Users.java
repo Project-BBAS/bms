@@ -9,20 +9,20 @@ import org.hibernate.annotations.SQLDelete;
 
 @Entity
 @NoArgsConstructor
-@Table(name = "USERS")
+@Table(name = "users")
 @SQLDelete(sql = "UPDATE users SET delete_flag = true WHERE id = ?")
 public class Users extends BaseEntity {
 
-    @Column(name = "NICKNAME", nullable = false, unique = true)
+    @Column(name = "nickname", nullable = false, unique = true)
     private String nickname;
 
-    @Column(name = "EMAIL", nullable = false, unique = true)
+    @Column(name = "email", nullable = false, unique = true)
     private String email;
 
-    @Column(name = "PASSWORD", nullable = false)
+    @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "PHONE_NUM", unique = true)
+    @Column(name = "phone_num", unique = true)
     private String phone_num;
 
 }

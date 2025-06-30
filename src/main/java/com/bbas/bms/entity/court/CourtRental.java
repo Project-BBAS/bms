@@ -10,23 +10,23 @@ import java.time.LocalDateTime;
 
 @Entity
 @NoArgsConstructor
-@Table(name = "COURT_RENTAL")
+@Table(name = "court_rental")
 @SQLDelete(sql = "UPDATE court_rental SET delete_flag = true WHERE id = ?")
 public class CourtRental extends BaseEntity {
-    @Column(name = "PRICE", nullable = false)
+    @Column(name = "price", nullable = false)
     private Long price;
 
-    @Column(name = "CHECK_IN", nullable = false)
+    @Column(name = "check_in", nullable = false)
     private LocalDateTime checkIn;
 
-    @Column(name = "CHECK_OUT", nullable = false)
+    @Column(name = "check_out", nullable = false)
     private LocalDateTime checkOut;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "COURT_ID")
+    @JoinColumn(name = "court_id")
     private Court court;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "USERS_ID")
+    @JoinColumn(name = "users_id")
     private Users users;
 }
