@@ -16,7 +16,7 @@ public class ItemCategory extends BaseEntity {
     @Column(name = "NAME", nullable = false, length = 100)
     private String name;
 
-    @OneToMany(mappedBy = "ITEM_CATEGORY")
+    @OneToMany(mappedBy = "itemCategory")
     private List<Item> itemList;
 
 }

@@ -16,7 +16,7 @@ public class PostCategory extends BaseEntity {
     @Column(name = "NAME", nullable = false, length = 100)
     private String name;
 
-    @OneToMany(mappedBy = "POST_CATEGORY")
+    @OneToMany(mappedBy = "postCategory")
     private List<Post> postList;
 
     public PostCategory(String name) {

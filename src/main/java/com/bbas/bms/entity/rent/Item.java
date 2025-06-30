@@ -1,11 +1,10 @@
 package com.bbas.bms.entity.rent;
 
 import com.bbas.bms.entity.common.BaseEntity;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 
-import jakarta.persistence.Table;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.SQLDelete;
 
@@ -29,5 +28,9 @@ public class Item extends BaseEntity {
 
     @Column(name = "END_TIME", nullable = false)
     private LocalDateTime end_time;
+
+    @ManyToOne
+    @JoinColumn(name = "ITEM_CATEGORY_ID")
+    private ItemCategory itemCategory;
 
 }
