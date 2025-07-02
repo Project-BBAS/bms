@@ -28,8 +28,7 @@ public class Match extends BaseEntity {
     @Column(name = "end_time", nullable = false)
     private LocalDateTime endTime;
 
-
-    @Column(name = "contents")
+    @Column(name = "contents",columnDefinition = "TEXT")
     private String contents;
 
     @ManyToOne(fetch = FetchType.LAZY)

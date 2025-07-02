@@ -17,7 +17,7 @@ public class Team extends BaseEntity {
     private String name;
 
     @Lob
-    @Column(name = "logo", columnDefinition = "bytea")
+    @Column(name = "logo")
     private byte[] logo;
 
 

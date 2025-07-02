@@ -12,3 +12,11 @@ spring:
     properties:
       hibernate:
         show_sql: false
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: info
+        tool:
+          schema: info
