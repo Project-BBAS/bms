@@ -21,21 +21,21 @@ public abstract class BaseEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "DELETE_FLAG", nullable = false)
+    @Column(name = "delete_flag", nullable = false)
     private boolean deleteFlag;
 
     @CreatedBy
-    @Column(name = "CREATED_BY", nullable = false, updatable = false)
+    @Column(name = "created_by", nullable = false, updatable = false)
     private String createdBy;
 
     @CreatedDate
-    @Column(name = "CREATED_DATE", nullable = false, updatable = false)
+    @Column(name = "created_date", nullable = false, updatable = false)
     private LocalDateTime createdDate;
 
     @LastModifiedBy
-    @Column(name = "MODIFIED_BY", nullable = false)
+    @Column(name = "modified_by", nullable = false)
     private String modifiedBy;
 
-    @Column(name = "MODIFIED_DATE", nullable = false)
+    @Column(name = "modified_date", nullable = false)
     private LocalDateTime modifiedDate;
 }

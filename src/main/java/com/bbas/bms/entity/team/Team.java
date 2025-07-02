@@ -9,23 +9,24 @@ import org.hibernate.annotations.SQLDelete;
 
 @Entity
 @NoArgsConstructor
-@Table(name = "TEAM")
+@Table(name = "team")
 @SQLDelete(sql = "UPDATE team SET delete_flag = true WHERE id = ?")
 public class Team extends BaseEntity {
 
-    @Column(name = "NAME", nullable = false)
+    @Column(name = "name", nullable = false)
     private String name;
 
     @Lob
-    @Column(name = "LOGO", columnDefinition = "BLOB")
+    @Column(name = "logo")
     private byte[] logo;
 
-    @Column(name = "CONTENTS")
+
+    @Column(name = "contents")
     private String contents;
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "AREA_ID", nullable = false)
+    @JoinColumn(name = "area_id", nullable = false)
     private Area area;
 
 

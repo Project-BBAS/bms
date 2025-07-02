@@ -12,32 +12,31 @@ import org.hibernate.annotations.SQLDelete;
 
 @Entity
 @NoArgsConstructor
-@Table(name = "MATCH")
+@Table(name = "match")
 @SQLDelete(sql = "UPDATE match SET delete_flag = true WHERE id = ?")
 public class Match extends BaseEntity {
 
-    @Column(name = "TITLE", nullable = false, length = 100)
+    @Column(name = "title", nullable = false, length = 100)
     private String title;
 
-    @Column(name = "STATUS", nullable = false, length = 10)
+    @Column(name = "status", nullable = false, length = 10)
     private String status;
 
-    @Column(name = "START_TIME", nullable = false)
+    @Column(name = "start_time", nullable = false)
     private LocalDateTime startTime;
 
-    @Column(name = "END_TIME", nullable = false)
+    @Column(name = "end_time", nullable = false)
     private LocalDateTime endTime;
 
-    @Lob
-    @Column(name = "CONTENTS", columnDefinition = "CLOB")
-    private byte[] contents;
+    @Column(name = "contents",columnDefinition = "TEXT")
+    private String contents;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "HOME_TEAM_ID", nullable = false)
+    @JoinColumn(name = "home_team_id", nullable = false)
     private Team homeTeam;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "AWAY_TEAM_ID", nullable = false)
+    @JoinColumn(name = "away_team_id", nullable = false)
     private Team awayTeam;
 
     @ManyToOne(fetch = FetchType.LAZY)

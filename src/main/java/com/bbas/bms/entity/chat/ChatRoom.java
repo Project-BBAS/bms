@@ -7,14 +7,14 @@ import org.hibernate.annotations.SQLDelete;
 
 @Entity
 @NoArgsConstructor
-@Table(name = "CHAT_ROOM")
+@Table(name = "chat_room")
 @SQLDelete(sql = "UPDATE chat_room SET delete_flag = true WHERE id = ?")
 public class ChatRoom extends BaseEntity {
 
-    @Column(name = "NAME", nullable = false, length = 100)
+    @Column(name = "name", nullable = false, length = 100)
     private String name;
 
-    @Column(name = "IS_GROUP", nullable = false)
+    @Column(name = "is_group", nullable = false)
     private boolean isGroup;
 
 }

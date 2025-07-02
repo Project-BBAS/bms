@@ -9,14 +9,14 @@ import java.util.List;
 
 @Entity
 @NoArgsConstructor
-@Table(name = "POST_CATEGORY")
+@Table(name = "post_category")
 @SQLDelete(sql = "UPDATE post_category SET delete_flag = true WHERE id = ?")
 public class PostCategory extends BaseEntity {
 
-    @Column(name = "NAME", nullable = false, length = 100)
+    @Column(name = "name", nullable = false, length = 100)
     private String name;
 
-    @OneToMany(mappedBy = "POST_CATEGORY")
+    @OneToMany(mappedBy = "postCategory")
     private List<Post> postList;
 
     public PostCategory(String name) {

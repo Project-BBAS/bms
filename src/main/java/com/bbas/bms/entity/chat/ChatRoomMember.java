@@ -8,16 +8,16 @@ import org.hibernate.annotations.SQLDelete;
 
 @Entity
 @NoArgsConstructor
-@Table(name = "CHAT_ROOM_MEMBER")
+@Table(name = "chat_room_member")
 @SQLDelete(sql = "UPDATE chat_room_member SET delete_flag = true WHERE id = ?")
 public class ChatRoomMember extends BaseEntity {
 
     @ManyToOne
-    @JoinColumn(name = "CHAT_ROOM_ID", nullable = false)
+    @JoinColumn(name = "chat_room_id", nullable = false)
     private ChatRoom chatRoom;
 
     @ManyToOne
-    @JoinColumn(name = "USERS_ID", nullable = false)
+    @JoinColumn(name = "users_id", nullable = false)
     private Users users;
 
 }

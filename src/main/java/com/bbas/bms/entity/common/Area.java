@@ -8,17 +8,17 @@ import org.hibernate.annotations.SQLDelete;
 
 @Entity
 @NoArgsConstructor
-@Table(name = "AREA")
+@Table(name = "area")
 @SQLDelete(sql = "UPDATE area SET delete_flag = true WHERE id = ?")
 public class Area extends BaseEntity{
 
-    @Column(name = "FIRST_ADDRESS", nullable = false)
+    @Column(name = "first_address", nullable = false)
     private Long firstAddress;
 
-    @Column(name = "SECOND_ADDRESS", nullable = false)
+    @Column(name = "second_address", nullable = false)
     private Long secondAddress;
 
-    @Column(name = "THIRD_ADDRESS", nullable = false)
+    @Column(name = "third_address", nullable = false)
     private Long thirdAddress;
 
 

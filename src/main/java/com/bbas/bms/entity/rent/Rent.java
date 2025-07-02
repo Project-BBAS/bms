@@ -14,21 +14,21 @@ import org.hibernate.annotations.SQLDelete;
 
 @Entity
 @NoArgsConstructor
-@Table(name = "RENT")
+@Table(name = "rent")
 @SQLDelete(sql = "UPDATE rent SET delete_flag = true WHERE id = ?")
 public class Rent extends BaseEntity {
 
-    @Column(name = "START_DATE", nullable = false)
+    @Column(name = "start_date", nullable = false)
     private LocalDateTime start_date;
 
-    @Column(name = "END_TIME", nullable = false)
+    @Column(name = "end_time", nullable = false)
     private LocalDateTime end_date;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ITEM_ID", nullable = false)
+    @JoinColumn(name = "item_id", nullable = false)
     private Item item;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "USERS_ID", nullable = false)
+    @JoinColumn(name = "users_id", nullable = false)
     private Users users;
 }
